@@ -185,3 +185,17 @@ Fri May 15 10:34:44 PM UTC 2026:
  tests:  4|2
 ========================================
 602c79d
+Fri May 15 10:37:45 PM UTC 2026: 
+ graph.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘createGraph’:
+graph.c:31:25: error: too few arguments to function ‘map_create’
+   31 |     grafo->adjacencyMap=map_create() ;
+      |                         ^~~~~~~~~~
+In file included from graph.c:8:
+map.h:14:6: note: declared here
+   14 | Map *map_create(int (*is_equal)(void *key1, void *key2)); // unsorted map
+      |      ^~~~~~~~~~
+b20b756
