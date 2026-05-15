@@ -52,3 +52,14 @@ Fri May 15 06:52:18 PM UTC 2026:
  tests:  1|5
 ========================================
 1909597
+Fri May 15 06:52:29 PM UTC 2026: 
+ graph.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getWeight’:
+graph.c:67:1: error: control reaches end of non-void function [-Werror=return-type]
+   67 | }
+      | ^
+cc1: all warnings being treated as errors
+cc3247c
