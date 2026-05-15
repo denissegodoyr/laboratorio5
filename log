@@ -73,3 +73,23 @@ Fri May 15 06:53:37 PM UTC 2026:
  tests:  1|5
 ========================================
 6f2a8eb
+Fri May 15 09:59:10 PM UTC 2026: 
+ graph.c | 7 +++++++
+ 1 file changed, 7 insertions(+)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addNode’:
+graph.c:36:37: error: passing argument 2 of ‘map_search’ discards ‘const’ qualifier from pointer target type [-Werror=discarded-qualifiers]
+   36 |     if (map_search(g->adjacencyMap, label)!=NULL) return ;
+      |                                     ^~~~~
+In file included from graph.c:8:
+map.h:22:37: note: expected ‘void *’ but argument is of type ‘const char *’
+   22 | MapPair *map_search(Map *map, void *key);
+      |                               ~~~~~~^~~
+In function ‘addNode’,
+    inlined from ‘addNode’ at graph.c:33:6:
+graph.c:39:16: error: ‘*nodo.key’ may be used uninitialized [-Werror=maybe-uninitialized]
+   39 |     strcpy(nodo->key, label) ;
+      |            ~~~~^~~~~
+cc1: all warnings being treated as errors
+17027a4
