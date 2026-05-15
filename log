@@ -6,3 +6,23 @@ Fri May  8 10:07:21 PM UTC 2026:
  tests:  0|6
 ========================================
 36e8bf5
+Fri May 15 06:46:36 PM UTC 2026: 
+ graph.c | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getWeight’:
+graph.c:57:36: error: request for member ‘target’ in something not a structure or union
+   57 |             if (is_equal_string(aux->target, label2)) {
+      |                                    ^~
+graph.c:57:46: error: passing argument 2 of ‘is_equal_string’ discards ‘const’ qualifier from pointer target type [-Werror=discarded-qualifiers]
+   57 |             if (is_equal_string(aux->target, label2)) {
+      |                                              ^~~~~~
+graph.c:21:39: note: expected ‘void *’ but argument is of type ‘const char *’
+   21 | int is_equal_string(void *key1, void *key2) {
+      |                                 ~~~~~~^~~~
+graph.c:58:27: error: request for member ‘weight’ in something not a structure or union
+   58 |                 return aux->weight ;
+      |                           ^~
+cc1: all warnings being treated as errors
+ceeeac9
