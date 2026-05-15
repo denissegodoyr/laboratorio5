@@ -36,8 +36,8 @@ void addNode(Graph* g, const char* label) {
     if (map_search(g->adjacencyMap, (void *)label)!=NULL) return ;
 
     MapPair *nodo=(MapPair *)malloc(sizeof(MapPair)) ;
-    char *copia=(char *) malloc(sizeof(char)) ;
-    strcpy(copia, label) ;
+    nodo->key=strdup(label) ;
+    
     nodo->value=list_create() ;
     map_insert(g->adjacencyMap, nodo->key, nodo->value) ;
     
