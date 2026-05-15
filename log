@@ -105,3 +105,19 @@ graph.c:39:16: error: ‘*nodo.key’ may be used uninitialized [-Werror=maybe-u
       |            ~~~~^~~~~
 cc1: all warnings being treated as errors
 5eeaf11
+Fri May 15 10:06:07 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addNode’:
+graph.c:39:11: error: unused variable ‘copia’ [-Werror=unused-variable]
+   39 |     char *copia=strcpy(nodo->key, label) ;
+      |           ^~~~~
+In function ‘addNode’,
+    inlined from ‘addNode’ at graph.c:33:6:
+graph.c:39:28: error: ‘*nodo.key’ may be used uninitialized [-Werror=maybe-uninitialized]
+   39 |     char *copia=strcpy(nodo->key, label) ;
+      |                        ~~~~^~~~~
+cc1: all warnings being treated as errors
+0c514a9
