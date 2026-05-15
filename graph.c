@@ -54,7 +54,7 @@ int getWeight(Graph* g, const char* label1, const char* label2) {
         List *lista=nodo->value ;
         Edge* aux=list_first(lista) ;
         while (aux!=NULL) {
-            if (is_equal_string(aux->target, label2)) {
+            if (is_equal_string(aux->target, (void *)label2)) {
                 return aux->weight ;
             }
         }
