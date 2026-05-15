@@ -63,7 +63,8 @@ int getWeight(Graph* g, const char* label1, const char* label2) {
     }
 
     
-    
+    // Si no existe el origen o terminamos de iterar sin encontrar el destino
+    return -1; 
 }
 
 // Retorna una nueva List* que contiene elementos de tipo char* (las etiquetas)
