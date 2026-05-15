@@ -91,8 +91,23 @@ int getWeight(Graph* g, const char* label1, const char* label2) {
 List* getAdjacentLabels(Graph* g, const char* label) {
     if (!g || !label) return NULL;
 
+    MapPair *nodo=map_search(g->adjacencyMap, (void *) label) ;
+    if (nodo==NULL) return NULL ;
 
-    return NULL; 
+    List *lista=list_create() ;
+
+    Edge *aux=list_first(nodo->value) ;
+    while (aux!=NULL) {
+        
+        list_pushBack(lista, aux->target) ;
+        aux=list_next(nodo->value) ;
+    }
+
+
+    
+
+
+    return lista; 
 }
 
 void destroyGraph(Graph* g) {
