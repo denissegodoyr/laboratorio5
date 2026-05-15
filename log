@@ -138,3 +138,15 @@ graph.c:39:17: error: cast from pointer to integer of different size [-Werror=po
 graph.c:39:17: error: initialization of ‘char *’ from ‘char’ makes pointer from integer without a cast [-Wint-conversion]
 cc1: all warnings being treated as errors
 89a8ffe
+Fri May 15 10:09:54 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+In function ‘addNode’,
+    inlined from ‘addNode’ at graph.c:33:6:
+graph.c:42:5: error: ‘*nodo.key’ may be used uninitialized [-Werror=maybe-uninitialized]
+   42 |     map_insert(g->adjacencyMap, nodo->key, nodo->value) ;
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+faba47f
