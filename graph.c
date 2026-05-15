@@ -54,7 +54,7 @@ void addEdge(Graph* g, const char* src, const char* dest, int weight) {
     arista->weight=weight ;
     arista->target=strdup(dest) ;
     
-    list_pushback(nodo->value, arista) ;
+    list_pushBack(nodo->value, arista) ;
 }
 
 List* getEdges(Graph* g, const char* label) {
